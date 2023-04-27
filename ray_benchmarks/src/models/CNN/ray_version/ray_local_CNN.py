@@ -147,7 +147,7 @@ def trainer_activation(dataset_abs_path: str, num_workers: int = 2, use_gpu=Fals
             "num_epochs": 3,
             "should_use_tqdm": False,
         },
-        scaling_config=ScalingConfig(num_workers=num_workers, use_gpu=use_gpu),
+        scaling_config=ScalingConfig(num_workers=9, use_gpu=use_gpu),
 
     )
     result = trainer.fit()
