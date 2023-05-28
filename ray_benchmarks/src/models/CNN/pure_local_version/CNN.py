@@ -85,7 +85,7 @@ def get_trained_model(
         learning_rate: float = 3e-4,
         num_epochs: int = 3,
         device: str = "cuda" if torch.cuda.is_available() else "cpu",
-        should_use_tqdm=False,
+        should_use_tqdm=True,
 ) -> CNN:
     if should_use_tqdm:
         train_loader = tqdm(train_loader)

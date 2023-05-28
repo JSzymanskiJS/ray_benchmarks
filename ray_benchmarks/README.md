@@ -28,7 +28,7 @@ pip 23.0.1 from /home/<LINUX_USER_NAME>/anaconda3/envs/ray_benchmarks/lib/python
 If everything is alright - continue copying and pasting:
 ```
 pip install torch torchvision torchaudio
-pip install numpy pandas boto3 tqdm
+pip install numpy pandas boto3 tqdm tabulate
 pip install -U "ray[default]"
 ```
 
@@ -75,31 +75,6 @@ pip install -U "ray[default]"
 │       └── visualize.py
 ```
 
-```
-Do przegadania:
-https://docs.ray.io/en/latest/data/key-concepts.html#fault-tolerance
-
-Pomysł: Napisanie zwykłej Ray-owej funkcji (Bez Ray[Data]) do odczytu zdjęć z Datasetu i utworzenie z tego DataLoader-a.
-Pomysł: Napisanie Ray-owej funkcji na bazie Ray[Data] do odczytu zdjęć z Datasetu i utworzenie z tego Ray-data-owego 
-    DataLoader-a.
-
-https://docs.ray.io/en/latest/ray-air/getting-started.html#project-status
-https://modal.com/
-
-Czy 'ray.init(num_cpus)'
-
-Znam programistę Rust, który szuka pracy.
-
-Jak wygląda flow tworzenia oprogramowania w oparciu o AI?
-    - Zaczynasz od celu biznesowego i budżetu klienta.
-    - Do celu wybierasz metrykę.
-    - Do metryki wybierasz funkcję kosztu (typ problemu).
-    - *Do funkcji kosztu dobieramy algorytm AI.*
-    - *Do algorytmu AI dobieramy framework-i i języki, w których potrafimy pisać.*
-    - *Algorytmy ubieramy w przydatną biznesowo i softwarowo abstrakcję.*
-    - *Zaimplementowanie algorytmu w architekturę spełniającą oczekiwania UX-owe klienta.*
-    - *Deploy.*
-    - *Support.*
-*Zależy od kosztu.
-
-```
+Do zrobienia:
+1. W pliku ray_AWS_CNN_playground.yaml w sekcji `setup_commands` odinstaluj i zainstaluj condę.
+2. Zmień wersję ImageId w `availble_node_types`

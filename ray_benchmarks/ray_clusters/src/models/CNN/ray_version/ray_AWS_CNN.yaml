@@ -9,7 +9,7 @@ cluster_name: ray-cluster-ray_AWS_CNN-benchmark
 max_workers: 9
 
 docker:
-  image: "rayproject/ray-ml:2.0.0"
+  image: "rayproject/ray-ml:2.4.0"
   container_name: "ray_container"
 
 provider:
